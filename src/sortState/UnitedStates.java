@@ -13,6 +13,8 @@ public class UnitedStates
 	   states = new ArrayList <State> ();
 	   
 	   readFile();
+	   
+	   
 	   printStates();
 	   
 	   System.out.println();
@@ -22,8 +24,9 @@ public class UnitedStates
 	   printStates();	
 	   
 	   menu();
+	   
+	   
 	}
-	
 	
 	
 	/*
@@ -32,18 +35,29 @@ public class UnitedStates
 	 * Use a merge sort to order the ArrayList
 	 * by the state's name
 	 */
-	public void sortStates(int front, int back) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
 	
+
+	    public void sortStates (String[] states, String[]left, String[]right) {
+	    	if (states.length > 2) {
+	    		
+	           left = new String [states.length / 2];
+	           
+	           right = new String[states.length - states.length / 2];
+
+	            for (int i = 0; i < left.length; i++) {
+	            	
+	                left[i] = states[i];
+	            }
+
+	            for (int i = 0; i < right.length; i++) {
+	            	
+	                right[i] = states[i + states.length / 2];
+	            }
+
+	           
+	        }
+	    }
+	            		
 	
 	/*
 	 * Quick Sort
@@ -127,6 +141,14 @@ public class UnitedStates
 	
 	
 	
+	
+
+	private void sortStates(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	public void printStates()
 	{
 		for(State s : states)
